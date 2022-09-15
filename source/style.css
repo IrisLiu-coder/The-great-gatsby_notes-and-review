@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+body{
+    background-image: url("https://i.pinimg.com/564x/65/d8/e8/65d8e8f06bb8a9436a6cb01d4a8e525b.jpg");
+    background-size: cover;
+    font-family:majormono;
+    color: rgb(255, 238, 144);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment:fixed;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25vh;
+    min-width: 100%;
+}
+.first_page{
+    display: flex;
+    background:linear-gradient(rgb(0, 5, 47), rgb(0, 1, 19));
+    width: 100%;
+    text-align: center;
+    margin-top: 25vh;
+    margin-bottom: 50vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: space-evenly;
+}
+.page{
+    position: relative;
+    background:linear-gradient(rgb(0, 5, 47), rgb(0, 1, 19));
+    width: 500px;
+    padding: 40px;
+    margin: 40px;
+    text-align: center;
+}
+
+.Title{
+    font-size: 72px;
+    font-family: 'Major Mono Display', monospace;
+    background: linear-gradient(goldenrod, yellow, gold, rgb(198, 155, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.text{
+    font-size: 16px;
+    font-family: 'Major Mono Display', monospace;
+    margin-top: 25px;
+    color: gold;
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    25% {
+       opacity: 1;
+    }
+    50% {
+       opacity: 0;
+    }
+    75% {
+        opacity: 1;
+     }
+    100% {
+       opacity: 0;
+    }
+}
+.animate01{
+    -webkit-animation: fadeInOut 10s;
+   animation: fadeInOut 10s;
+   animation-iteration-count: infinite;
+}
