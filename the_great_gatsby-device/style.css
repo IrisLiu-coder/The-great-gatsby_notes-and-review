@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+body{
+    background-image: url("https://i.pinimg.com/564x/06/00/ee/0600ee69140267054e3c7d300cbfc820.jpg");
+    background-size: cover;
+    font-family:majormono;
+    color: rgb(255, 238, 144);
+}
+.page1{
+    display: flex; 
+    background:linear-gradient(rgb(0, 5, 47), rgb(0, 1, 19));
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    justify-content:space-evenly; 
+    text-align: center;
+}
+.Title{
+    font-size: 72px;
+    font-family: 'Major Mono Display', monospace;
+    background: linear-gradient(goldenrod, yellow, gold, rgb(198, 155, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+    float:left
+}
