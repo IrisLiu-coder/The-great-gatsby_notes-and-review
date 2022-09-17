@@ -74,3 +74,19 @@ body{
    animation: fadeInOut 10s;
    animation-iteration-count: infinite;
 }
+#menu{
+    padding: 10px;
+    position: sticky;
+    top:0;
+    max-width: 20px;
+    animation-name:fadeIn;
+    animation-duration:2s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+}
