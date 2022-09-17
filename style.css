@@ -1,25 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 body{
     background-image: url("https://i.pinimg.com/564x/65/d8/e8/65d8e8f06bb8a9436a6cb01d4a8e525b.jpg");
     background-size: cover;
-    font-family:majormono;
+    font-family: 'Major Mono Display', monospace;
     color: rgb(255, 238, 144);
     background-repeat: no-repeat;
     min-height: 100vh;
     background-attachment:fixed;
+    margin: 0;
+    display: flex;
+    box-sizing: border-box;
 }
 .content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    float: left;
+    width: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25vh;
-    min-width: 100%;
 }
-.first_page{
+#first_page{
     display: flex;
     background:linear-gradient(rgb(0, 5, 47), rgb(0, 1, 19));
     width: 100%;
@@ -33,12 +31,11 @@ body{
 .page{
     position: relative;
     background:linear-gradient(rgb(0, 5, 47), rgb(0, 1, 19));
-    width: 500px;
-    padding: 40px;
-    margin: 40px;
+    width: 100%;
+    padding-top: 40px;
+    margin-top: 40px;
     text-align: center;
 }
-
 .Title{
     font-size: 72px;
     font-family: 'Major Mono Display', monospace;
@@ -74,19 +71,47 @@ body{
    animation: fadeInOut 10s;
    animation-iteration-count: infinite;
 }
-#menu{
-    padding: 10px;
-    position: sticky;
-    top:0;
+#index_click{
+    padding: 5px;
+    padding-right: 20px;
     max-width: 20px;
     animation-name:fadeIn;
     animation-duration:2s;
+    position: sticky;
+    top: 0;
 }
 @keyframes fadeIn {
     0% {
-        opacity: 0;
+        opacity:0;
+    }
+    50%{
+        opacity:0.5;
     }
     100% {
-       opacity: 1;
+        opacity:1;
     }
+}
+#index{
+    float: left;
+    position: sticky;
+    top:50px;
+    font-family: majormono;
+}
+.indexbox{
+    background-color: black;
+    padding: 10px;   
+    position: sticky;
+    top:0;
+    height: 100hv;
+}
+.box{
+    padding:30px;
+    position: absolute;
+    right: 20px;
+}
+a{
+    padding: 10px;
+    color: gold;
+    text-decoration:none;
+    font-family: 'Major Mono Display', monospace;
 }
