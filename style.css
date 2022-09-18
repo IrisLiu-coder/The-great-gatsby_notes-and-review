@@ -2,7 +2,7 @@ body{
     background-image: url("https://i.pinimg.com/564x/65/d8/e8/65d8e8f06bb8a9436a6cb01d4a8e525b.jpg");
     background-size: cover;
     font-family: 'Major Mono Display', monospace;
-    color: rgb(255, 238, 144);
+    color: rgb(255, 200, 37);
     background-repeat: no-repeat;
     min-height: 100vh;
     background-attachment:fixed;
@@ -22,7 +22,7 @@ body{
     background:linear-gradient(rgb(0, 5, 47), rgb(0, 1, 19));
     width: 100%;
     text-align: center;
-    margin-top: 25vh;
+    margin-top: 27vh;
     margin-bottom: 50vh;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -30,10 +30,9 @@ body{
 }
 .page{
     position: relative;
-    background:linear-gradient(rgb(0, 5, 47), rgb(0, 1, 19));
     width: 100%;
-    padding-top: 40px;
-    margin-top: 40px;
+    padding-top: 10px;
+    margin-top: 10px;
     text-align: center;
 }
 .Title{
@@ -50,21 +49,11 @@ body{
     color: gold;
 }
 @keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-    25% {
-       opacity: 1;
-    }
-    50% {
-       opacity: 0;
-    }
-    75% {
-        opacity: 1;
-     }
-    100% {
-       opacity: 0;
-    }
+    0% {opacity: 0;}
+    25% {opacity: 1;}
+    50% {opacity: 0;}
+    75% {opacity: 1;}
+    100% {opacity: 0;}
 }
 .animate01{
     -webkit-animation: fadeInOut 10s;
@@ -81,18 +70,11 @@ body{
     top: 0;
 }
 @keyframes fadeIn {
-    0% {
-        opacity:0;
-    }
-    50%{
-        opacity:0.5;
-    }
-    100% {
-        opacity:1;
-    }
+    0% {opacity:0;}
+    50%{opacity:0.5;}
+    100% {opacity:1;}
 }
 #index{
-    float: left;
     position: sticky;
     top:50px;
     font-family: majormono;
@@ -102,7 +84,6 @@ body{
     padding: 10px;   
     position: sticky;
     top:0;
-    height: 100hv;
 }
 .box{
     padding:30px;
@@ -115,3 +96,52 @@ a{
     text-decoration:none;
     font-family: 'Major Mono Display', monospace;
 }
+.H1{
+    margin-left: 0px;
+}
+.H2{
+    margin-left: 10px;
+}
+.ctx{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: rgb(0, 4, 28,0.7);
+    text-align: left;
+}
+.container {
+    width: 200px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+  }
+  .rp {
+    left: 0;
+    top: 0;
+    position: absolute;
+    backface-visibility: hidden; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+  .flip {
+    transform: rotateY(180deg);
+  }
+#roar20{
+    opacity:1;
+    transition: opacity 1s; 
+}
+#roar20.fadeOut {
+    opacity:0;
+}
+  
