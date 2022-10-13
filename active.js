@@ -81,6 +81,5 @@ function roar() {
 function post_onclick(){
     curposters++;
     if (curposters == posterArray.length) { curposters = 0; }
-    document.getElementById('posters').src = posterArray[curposters]; 
-    
+    document.getElementById('posters').src = posterArray[curposters];    
 }
