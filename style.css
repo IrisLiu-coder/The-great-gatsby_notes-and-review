@@ -1,6 +1,5 @@
 body{
-    background-image: url("https://i.pinimg.com/564x/65/d8/e8/65d8e8f06bb8a9436a6cb01d4a8e525b.jpg");
-    background-size: cover;
+    background-color: #191934;
     font-family: 'Major Mono Display', monospace;
     color: rgb(255, 200, 37);
     background-repeat: no-repeat;
@@ -13,13 +12,14 @@ body{
 .content{
     float: left;
     width: 100%;
+    
     display:table;
     flex-direction: column;
     align-items: center;
 }
 #first_page{
     display: flex;
-    background:linear-gradient(rgb(0, 5, 47), rgb(0, 1, 19));
+    background: #000;
     width: 100%;
     text-align: center;
     margin-top: 27vh;
@@ -85,7 +85,7 @@ body{
     position: sticky;
     top:0;
 }
-.box{
+.box01{
     padding:30px;
     position: absolute;
     right: 20px;
@@ -113,12 +113,12 @@ a{
     text-align: left;
 }
 .container {
-    width: 200px;
-    height: 400px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s ease-in-out;
-  }
+    display: flex;
+    min-height: 200px;
+    perspective: 800px;
+    touch-action: none;
+}
+
   .rp {
     left: 0;
     top: 0;
@@ -141,18 +141,10 @@ a{
     opacity:1;
     transition: opacity 1s; 
 }
-#roar20.fadeOut {
-    opacity:0;
-}
 #source{
     margin-bottom: 50px;
 }
-.card-wrap{
-    width:320px;
-    height:448px;
-    position:relative;
-    margin: 20px;
-}
+
 .card{
     position:absolute;
     width:100%;
@@ -161,24 +153,33 @@ a{
     transition:0.5s all ease;
     box-shadow:0px 0px 10px rgba(10,10,0.8);
 }
-.card:hover{
-    transform:rotateY(360deg);
+
+.wrap {
+    position: relative;
+    width: 240px;
+    height: 360px;
+    margin: auto;
+    transform-style: preserve-3d;
+    pointer-events: none;
 }
-.card-front{
-    border-radius:5px;
-    position:absolute;
-    width:100%;
-    height:100%;
-    font-size:1.5rem;
-    backface-visibility:hidden;
- }
-.card-back{
-    border-radius:5px;
-    position:absolute;
-    width:100%;
-    height:100%;
-    backface-visibility:hidden;
-    font-size:1.5rem; 
-    background:url("https://m.media-amazon.com/images/M/MV5BMjMyNzg5NDQzN15BMl5BanBnXkFtZTcwNjYwNTMxOQ@@._V1_.jpg") center top repeat;
-    transform:rotateY(180deg);
+.wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.image_rotate {
+    animation: rotation 2s linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
