@@ -58,7 +58,9 @@ for(var i=0;i<4;i++){
 var roarArray = [
     'https://upload.wikimedia.org/wikipedia/commons/3/34/GertrudeStein_JackHemingway_Paris.jpg',
     'https://upload.wikimedia.org/wikipedia/commons/9/9b/Chrysler_Building_1_%284684845155%29.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Douglas_Fairbanks_and_Mary_Pickford_02.jpg/800px-Douglas_Fairbanks_and_Mary_Pickford_02.jpg'],
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Douglas_Fairbanks_and_Mary_Pickford_02.jpg/800px-Douglas_Fairbanks_and_Mary_Pickford_02.jpg',
+    'https://upload.wikimedia.org/wikipedia/en/d/d9/Unchienandalouposter.jpg'
+],
 curIndex = 0,
 posterArray = ['https://m.media-amazon.com/images/M/MV5BZGY1OTliNmMtYzQ2My00NjI0LWI4MTItNmY1NjA0YzI1ZTdhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX763_.jpg',
     'https://th.bing.com/th/id/R.6bfade826e4a2d46871e9d924a6a7914?rik=h8IWvo7GOOPQrg&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fen%2fthumb%2fd%2fdf%2fDaisy_Buchanan.png%2f220px-Daisy_Buchanan.png&ehk=XCkGf6edqf3%2bI4%2f9HpN9zSFPXgyy%2foONeBg5IMeXFYc%3d&risl=&pid=ImgRaw&r=0',
@@ -71,18 +73,20 @@ posterArray = ['https://m.media-amazon.com/images/M/MV5BZGY1OTliNmMtYzQ2My00NjI0
 roarIntroduceArray=[
     "The Lost Generation was composed of young people who came out of World War I disillusioned and cynical about the world. The term usually refers to American literary notables who lived in Paris at the time. Famous members included Ernest Hemingway, F. Scott Fitzgerald, and Gertrude Stein. These authors, some of them expatriates, wrote novels and short stories expressing their resentment towards the materialism and individualism rampant during this era.\n(Gertrude Stein with Ernest Hemingway's son Jack in 1924. Stein is credited with bringing the term 'Lost Generation' into use.)",
     "Art Deco was the style of design and architecture that marked the era. Originating in Europe, it spread to the rest of western Europe and North America towards the mid-1920s.\nIn the U.S., one of the more remarkable buildings featuring this style was constructed as the tallest building of the time: the Chrysler Building. The forms of art deco were pure and geometric, though the artists often drew inspiration from nature. In the beginning, lines were curved, though rectilinear designs would later become more and more popular.",
-    "Western fashion in the 1920s underwent a modernization. For women, fashion had continued to change away from the extravagant and restrictive styles of the Victorian and Edwardian periods, and towards looser clothing which revealed more of the arms and legs, that had begun at least a decade prior with the rising of hemlines to the ankle and the movement from the S-bend corset to the columnar silhouette of the 1910s. Men also began to wear less formal daily attire and athletic clothing or 'Sportswear' became a part of mainstream fashion for the first time. The 1920s are characterized by two distinct periods of fashion: in the early part of the decade, change was slower, and there was more reluctance to wear the new, revealing popular styles. From 1925, the public more passionately embraced the styles now typically associated with the Roaring Twenties. These styles continued to characterize fashion until the worldwide depression worsened in 1931."
+    "Western fashion in the 1920s underwent a modernization. For women, fashion had continued to change away from the extravagant and restrictive styles of the Victorian and Edwardian periods, and towards looser clothing which revealed more of the arms and legs, that had begun at least a decade prior with the rising of hemlines to the ankle and the movement from the S-bend corset to the columnar silhouette of the 1910s. Men also began to wear less formal daily attire and athletic clothing or 'Sportswear' became a part of mainstream fashion for the first time. The 1920s are characterized by two distinct periods of fashion: in the early part of the decade, change was slower, and there was more reluctance to wear the new, revealing popular styles. From 1925, the public more passionately embraced the styles now typically associated with the Roaring Twenties. These styles continued to characterize fashion until the worldwide depression worsened in 1931.",
+    "Un Chien Andalou (French pronunciation: ​[œ̃ ʃjɛ̃ ɑ̃dalu], An Andalusian Dog) is a 1929 French silent short film directed by Luis Buñuel, and written by Buñuel and Salvador Dalí. Buñuel's first film, it was initially released in a limited capacity at Studio des Ursulines in Paris, but became popular and ran for eight months.<br><br>Un Chien Andalou has no plot in the conventional sense of the word. With disjointed chronology, jumping from the initial 'once upon a time' to 'eight years later' without events or characters changing, it uses dream logic in narrative flow that can be described in terms of the then-popular Freudian free association, presenting a series of tenuously related scenes. Un Chien Andalou is a seminal work in the genre of surrealist cinema."
 ],roarTitle=[
     "The Lost Generation",
     "Art Deco",
-    "1920s in Western fashion"
+    "1920s in Western fashion",
+    "Un Chien Andalou-a seminal work in the genre of surrealist cinema(1929)"
 ]
 ;
 function roar() {
     $("#roar").slideToggle("linear");
     setTimeout(function() {
         document.getElementById('roar20').src = roarArray[curIndex];
-        document.getElementById('roarIntroduce').innerHTML="<h3>"+roarTitle[curIndex]+"</h3>"+roarIntroduceArray[curIndex];
+        document.getElementById('roarIntroduce').innerHTML="<h3>"+roarTitle[curIndex]+"</h3>"+roarIntroduceArray[curIndex]+'<br><br><br>click picture!';
         $("#roar").slideToggle("linear");
     },500);
     curIndex++;
