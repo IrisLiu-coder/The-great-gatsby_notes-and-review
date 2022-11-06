@@ -1,3 +1,4 @@
+//1107
 window.onload;
 var index_status=0;
 function info(){
