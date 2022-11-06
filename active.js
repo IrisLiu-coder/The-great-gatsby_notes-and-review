@@ -121,8 +121,7 @@ setTimeout(() => {
 
 
 // wrap沿x轴旋转-10度
-const rotate = { x: -10, y: 0 };
-wrap.style.transform = 'rotateX(' + rotate.x + 'deg)';
+const rotate = { x: 0, y: 0 };
 
 let isPointerDown = false;
 let point = null;
@@ -149,7 +148,7 @@ container.addEventListener('pointermove', function (e) {
         rotate.x -= diff.y * 0.05;
         rotate.y += diff.x * 0.05;
         last = { x: current.x, y: current.y };
-        wrap.style.transform = 'rotateX(' + rotate.x + 'deg) rotateY(' + rotate.y + 'deg)';
+        wrap.style.transform = 'rotateY(' + rotate.y + 'deg)';
     }
 });
 // 监听pointerup事件
@@ -171,7 +170,7 @@ function raf() {
         y *= 0.95;
         rotate.x -= y * 0.1;
         rotate.y += x * 0.05;
-        wrap.style.transform = 'rotateX(' + rotate.x + 'deg) rotateY(' + rotate.y + 'deg)';
+        wrap.style.transform ='rotateY(' + rotate.y + 'deg)';
         // 小于1停止动画
         if (Math.abs(x) > 1 || Math.abs(y) > 1) {
             rafId = requestAnimationFrame(step);
